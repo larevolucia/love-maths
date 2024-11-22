@@ -75,7 +75,7 @@ function calculateCorrectAnswer(){
 
 }
 /**
- * Gets current score from DOM 
+ * Gets current score from DOM adds 1
  * and display incremented score back to DOM
  */
 function incrementScore(){
@@ -83,7 +83,7 @@ function incrementScore(){
     document.getElementById("score").textContent = ++currentScore;
 }
 /**
- * Gets current wrong Answers counter from DOM 
+ * Gets current wrong Answers counter from DOM adds 1
  * and display incremented score back to DOM
  */
 function incrementWrongAnswer(){
