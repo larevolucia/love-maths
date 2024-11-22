@@ -14,10 +14,10 @@
     <h1 class="heading"><img src="assets/images/logo.png" alt="Love Maths" class="logo"> Love Maths</h1>
     <div class="game-area">
         <div class="controls-area">
-            <button class="btn btn--big btn--green"><i class="fa-solid fa-plus"></i></button>
-            <button class="btn btn--big btn--blue"><i class="fa-solid fa-minus"></i></button>
-            <button class="btn btn--big btn--orange"><i class="fa-solid fa-times"></i></button>
-            <button class="btn btn--big btn--red"><i class="fa-solid fa-divide"></i></button>
+            <button data-type="addition" class="btn btn--big btn--green"><i class="fa-solid fa-plus"></i></button>
+            <button data-type="subtract" class="btn btn--big btn--blue"><i class="fa-solid fa-minus"></i></button>
+            <button data-type="multiply" class="btn btn--big btn--orange"><i class="fa-solid fa-times"></i></button>
+            <button data-type="division" class="btn btn--big btn--red"><i class="fa-solid fa-divide"></i></button>
         </div>
         <div class="question-area">
             <span id="operand1">0</span>
@@ -27,7 +27,7 @@
             <p class="answer-message">Enter Answer:</p>
             <input type="number" id="answer-box">
         </div>
-        <button class="btn btn--gray">Submit Answer</button>
+        <button data-type="submit" class="btn btn--gray">Submit Answer</button>
     </div>
     <div class="score-area">
         <p class="scores">Correct answers <span id="score">0</span></p>
