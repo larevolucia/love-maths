@@ -50,8 +50,10 @@ function checkAnswer(){
 
     if (isCorrect) {
         alert("Hey! You got it right! :D");
+        incrementScore()
     } else {
         alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+        incrementWrongAnswer()
     }
     runGame(calculatedAnswer[1]);
 }
@@ -72,11 +74,21 @@ function calculateCorrectAnswer(){
     throw `Unimplemented operator: ${operator}. Aborting!`; }
 
 }
+/**
+ * Gets current score from DOM 
+ * and display incremented score back to DOM
+ */
 function incrementScore(){
-
+    let currentScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").textContent = ++currentScore;
 }
+/**
+ * Gets current wrong Answers counter from DOM 
+ * and display incremented score back to DOM
+ */
 function incrementWrongAnswer(){
-
+    let incorrectAnswers = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").textContent = ++incorrectAnswers;
 }
 /**
  * Displays the math challenge for addition 
