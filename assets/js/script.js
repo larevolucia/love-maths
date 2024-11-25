@@ -34,7 +34,10 @@ function runGame(gameType){
 
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
-    } else {
+    } else if (gameType === "multiply"){
+        displayMultiplyQuestion(num1, num2);
+    }
+    else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
@@ -103,8 +106,14 @@ function displayAdditionQuestion(operand1, operand2){
 function displaySubtractionQuestion(){
 
 }
-function displayMultiplyQuestion(){
-
+/**
+ * Displays the math challenge for multiplication 
+ * using the numbers generated in the runGame function
+ */
+function displayMultiplyQuestion(operand1, operand2){
+    document.getElementById("operand1").textContent = operand1;
+    document.getElementById("operand2").textContent = operand2;
+    document.getElementById("operator").textContent = `x`;
 }
 function displayDivideQuestion(){
 
