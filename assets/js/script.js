@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+    document.addEventListener("keydown", function (e){
+    if (e.key === "Enter"){  
+        checkAnswer();
+    }   
+});
     runGame("addition");
 })
 
@@ -30,7 +35,7 @@ function runGame(gameType){
     
     document.getElementById("answer-box").value = "";
     document.getElementById("answer-box").focus();
-    
+
     // Creates two random numbers between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
@@ -56,10 +61,17 @@ function checkAnswer(){
     let calculatedAnswer = calculateCorrectAnswer();
     let isCorrect = userAnswer === calculatedAnswer[0];
 
-    if (isCorrect) {
+    if 
+    (isNaN(userAnswer)) {
+        alert("Oops! It seems like you forgot to write your answer!");
+        return;
+    }
+    else if 
+    (isCorrect) {
         alert("Hey! You got it right! :D");
         incrementScore()
-    } else {
+    } 
+    else {
         alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
         incrementWrongAnswer()
     }
